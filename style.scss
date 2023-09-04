@@ -1,3 +1,42 @@
+// variables
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+$Lime-Green: #1db489;
+$Bright-Red: #dc414c;
+
+$Facebook: #198ff5;
+$Twitter: #1ca0f2;
+$Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+$YouTube: #c4032a;
+
+// #### Dark Theme
+
+$Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+
+// #### Light Theme
+
+$Toggle: #aeb3cb;
+
+// ### Neutral
+
+// #### Dark Theme
+
+$Very-Dark-Blue : #1e202a; /*BG*/
+$Very-Dark-Blue : #1f212e; /*BG*/
+$Dark-Desaturated-Blue: #252a41; /*BG*/
+$Desaturated-Blue: #8b97c6; /*Text*/
+$White: #ffffff; /*Text*/
+
+// #### Light Theme
+
+$White: #ffffff; /*BG*/
+$Very-Pale-Blue: #f5f7ff; /*BG*/
+$Light-Grayish-Blue: #f0f2fa; /*BG*/
+$Dark-Grayish-Blue : #63687e; /*Text*/
+$Very-Dark-Blue: #1e202a; /*Text*/
+
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -11,4 +50,12 @@ body{
 
 main{
     margin: 1rem;
+}
+
+.item-one{
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 1rem 0;
+    align-items: center;
+    justify-content: space-between;
 }
