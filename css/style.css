@@ -16,18 +16,68 @@
 }
 
 body {
-  background: rgb(30, 52, 112);
+  background: #1e202a;
   color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
 }
 
 main {
   margin: 1rem;
 }
 
-.item-one {
+.header {
   display: flex;
   flex-direction: row;
   margin: 0 0 1rem 0;
   align-items: center;
   justify-content: space-between;
+}
+.header .subject span {
+  color: #8b97c6;
+  font-weight: bold;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #198ff5 5%, #252a41 5%, #252a41 100%);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+.profile-2 {
+  background-image: linear-gradient(to bottom, #1ca0f2 5%, #252a41 5%, #252a41 100%);
+}
+.profile-3 {
+  background-image: linear-gradient(to bottom, #fdc468 0%, #df4996 5%, #252a41 5%, #252a41 100%);
+}
+.profile .username {
+  display: flex;
+  gap: 0.5rem;
+  color: #8b97c6;
+  margin: 2rem 0;
+}
+.profile h2 {
+  font-size: 3rem;
+}
+.profile p {
+  color: #8b97c6;
+  letter-spacing: 2px;
+}
+.profile small {
+  color: #1db489;
+  margin: 2rem 0 0 0;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.profile-4 {
+  background-image: linear-gradient(to bottom, #c4032a 5%, #252a41 5%, #252a41 100%);
+}
+.profile-4 small {
+  color: #c4032a;
 }/*# sourceMappingURL=style.css.map */
