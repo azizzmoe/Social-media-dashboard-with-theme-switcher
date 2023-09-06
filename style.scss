@@ -1,13 +1,13 @@
 // variables
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 $Lime-Green: #1db489;
 $Bright-Red: #dc414c;
 
 $Facebook: #198ff5;
 $Twitter: #1ca0f2;
-$Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+$Instagram: linear-gradient(to right, #fdc468, #df4996);
 $YouTube: #c4032a;
 
 // #### Dark Theme
@@ -22,8 +22,8 @@ $Toggle: #aeb3cb;
 
 // #### Dark Theme
 
-$Very-Dark-Blue : #1e202a; /*BG*/
-$Very-Dark-Blue : #1f212e; /*BG*/
+$Very-Dark-Blue: #1e202a; /*BG*/
+$Very-Dark-Blue: #1f212e; /*BG*/
 $Dark-Desaturated-Blue: #252a41; /*BG*/
 $Desaturated-Blue: #8b97c6; /*Text*/
 $White: #ffffff; /*Text*/
@@ -33,29 +33,108 @@ $White: #ffffff; /*Text*/
 $White: #ffffff; /*BG*/
 $Very-Pale-Blue: #f5f7ff; /*BG*/
 $Light-Grayish-Blue: #f0f2fa; /*BG*/
-$Dark-Grayish-Blue : #63687e; /*Text*/
+$Dark-Grayish-Blue: #63687e; /*Text*/
 $Very-Dark-Blue: #1e202a; /*Text*/
 
-
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-body{
-    background: rgb(30, 52, 112);
-    color: white;
+body {
+  background: $Very-Dark-Blue;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
 }
 
-main{
-    margin: 1rem;
+main {
+  margin: 1rem;
 }
 
-.item-one{
+.header {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 1rem 0;
+  align-items: center;
+  justify-content: space-between;
+
+  .subject{
+    span{
+      color: $Desaturated-Blue;
+      font-weight: bold;
+    }
+  }
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom,
+    $Facebook 5%,
+    #252a41 5%,
+    #252a41 100%
+  );
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+
+  &-2 {
+    background-image: linear-gradient(
+      to bottom,
+      $Twitter 5%,
+      #252a41 5%,
+      #252a41 100%
+    );
+  }
+
+  &-3 {
+    background-image: linear-gradient(
+      to bottom,
+      #fdc468 0%,
+      #df4996 5%,
+      #252a41 5%,
+      #252a41 100%
+    );
+  }
+
+  .username {
     display: flex;
-    flex-direction: row;
-    margin: 0 0 1rem 0;
+    gap: 0.5rem;
+    color: $Desaturated-Blue;
+    margin: 2rem 0;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    color: #8b97c6;
+    letter-spacing: 2px;
+  }
+  small {
+    color: $Lime-Green;
+    margin: 2rem 0 0 0;
+    display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 0.2rem;
+  }
 }
+
+.profile-4 {
+  background-image: linear-gradient(
+    to bottom,
+    $YouTube 5%,
+    #252a41 5%,
+    #252a41 100%
+  );
+  small {
+    color: $YouTube;
+  }
+}
+ 
