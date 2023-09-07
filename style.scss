@@ -43,10 +43,18 @@ $Very-Dark-Blue: #1e202a; /*Text*/
 }
 
 body {
-  background: $Very-Dark-Blue;
-  color: white;
   font-family: "Inter", sans-serif;
   font-size: 14px;
+
+  &.dark-mode {
+    background: $Very-Dark-Blue;
+    color: white;
+  }
+
+  &.light-mode {
+    background: $Very-Pale-Blue;
+    color: white;
+  }
 }
 
 main {
@@ -60,28 +68,32 @@ main {
   align-items: center;
   justify-content: space-between;
 
-  .subject{
-    span{
+  .subject {
+    span {
       color: $Desaturated-Blue;
       font-weight: bold;
     }
   }
 }
 
-.profile {
+.pro {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(
-    to bottom,
-    $Facebook 5%,
-    #252a41 5%,
-    #252a41 100%
-  );
-  padding: 1rem;
+  background-color: $Dark-Desaturated-Blue;
+  padding: 0 0rem 1rem 0rem;
   border-radius: 0.5rem;
   margin-bottom: 2rem;
+
+  &-1::before{
+    content: "";
+    width: 100%;
+    height: 10px;
+    background-color: $Facebook;
+  border-radius: 0.5rem 0.5rem 0 0;
+
+  }
 
   &-2 {
     background-image: linear-gradient(
@@ -126,7 +138,7 @@ main {
   }
 }
 
-.profile-4 {
+.pro-4 {
   background-image: linear-gradient(
     to bottom,
     $YouTube 5%,
@@ -137,4 +149,58 @@ main {
     color: $YouTube;
   }
 }
- 
+
+// Toggle switch
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  border-radius: 1rem;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 10rem;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
